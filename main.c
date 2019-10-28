@@ -18,9 +18,9 @@ int main()
     for(i=0;i<length;i++)
     {
       ct[i]=pt[i]+key;
-      if((islower(pt[i]))&&(ct[i]>'z'))
+      if((islower(pt[i]))&&(ct[i]>'y'))
             ct[i]=ct[i]-26;
-      if((isupper(pt[i])&&(ct[i]>'Z')))
+      if((isupper(pt[i])&&(ct[i]>'Y')))
             ct[i]=ct[i]-26;
     }
     printf("Encrypted text is %s\n",ct);
@@ -28,9 +28,9 @@ int main()
     for(i=0;i<length;i++)
     {
       pt[i]=ct[i]-key;
-      if((islower(ct[i]))&&(pt[i]<'a'))
+      if((islower(ct[i]))&&(pt[i]<'b'))
             pt[i]=pt[i]+26;
-      if((isupper(ct[i])&&(pt[i]<'A')))
+      if((isupper(ct[i])&&(pt[i]<'B')))
             pt[i]=pt[i]+26;
     }
     printf("Decrypted text is %s\n",pt);
